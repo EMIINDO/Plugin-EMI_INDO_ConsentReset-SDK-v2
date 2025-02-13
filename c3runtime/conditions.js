@@ -1,6 +1,6 @@
 "use strict";
 {
-    self.globalThis.C3.Plugins.EMI_INDO_ConsentReset.Cnds = {
+    globalThis.C3.Plugins.EMI_INDO_ConsentReset.Cnds = {
         OnConsentStstusObtained()
         {
             return true;
