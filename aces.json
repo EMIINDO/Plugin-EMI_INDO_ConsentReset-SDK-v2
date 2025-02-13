@@ -1,0 +1,123 @@
+{
+  "consent": {
+    "conditions": [
+      {
+        "id": "on-consent-ststus-obtained",
+        "scriptName": "OnConsentStstusObtained",
+        "highlight": true,
+        "isTrigger": true
+      },
+      {
+        "id": "on-consent-data-expired",
+        "scriptName": "OnConsentDataExpired",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-consent-reset",
+        "scriptName": "OnConsentReset",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [
+      {
+        "id": "get-consent-status",
+        "scriptName": "GetConsentStatus",
+        "highlight": true,
+        "isAsync": true
+      },
+      {
+        "id": "consent-reset",
+        "scriptName": "ConsentReset",
+        "highlight": true,
+        "isAsync": true,
+        "params": [
+          {
+            "id": "key",
+            "type": "string",
+            "initialValue": "\"consent_expiry\""
+          },
+          {
+            "id": "value",
+            "type": "string",
+            "initialValue": "\"expired status\""
+          },
+          {
+            "id": "days",
+            "type": "any",
+            "initialValue": "360"
+          },
+          {
+            "id": "enabledRnTime",
+            "type": "combo",
+            "items": [
+              "true",
+              "false"
+            ],
+            "initialValue": "false"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "id": "consent-status",
+        "expressionName": "ConsentStatus",
+        "returnType": "number"
+      }
+    ]
+  },
+  "debug": {
+    "conditions": [
+      {
+        "id": "on-consent-data",
+        "scriptName": "OnConsentData",
+        "highlight": false,
+        "isTrigger": true
+      },
+      {
+        "id": "on-remaining-time",
+        "scriptName": "OnRemainingTime",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "expires-time",
+        "expressionName": "ExpiresTime",
+        "returnType": "any"
+      },
+      {
+        "id": "item-name",
+        "expressionName": "ItemName",
+        "returnType": "any"
+      },
+      {
+        "id": "event-response",
+        "expressionName": "EventResponse",
+        "returnType": "any"
+      }
+    ]
+  },
+  "error": {
+    "conditions": [
+      {
+        "id": "on-error",
+        "scriptName": "OnError",
+        "highlight": false,
+        "isTrigger": true
+      }
+    ],
+    "actions": [],
+    "expressions": [
+      {
+        "id": "error-code",
+        "expressionName": "ErrorCode",
+        "returnType": "any"
+      }
+    ]
+  }
+}

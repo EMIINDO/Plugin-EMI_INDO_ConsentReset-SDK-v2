@@ -1,0 +1,34 @@
+{
+  "is-c3-addon": true,
+  "sdk-version": 2,
+  "min-construct-version": "r401",
+  "type": "plugin",
+  "name": "ConsentReset",
+  "id": "EMI_INDO_ConsentReset",
+  "version": "2.0.0.0",
+  "author": "EMI_INDO",
+  "website": "https://www.construct.net",
+  "documentation": "https://www.construct.net/en/forum/construct-3/plugin-sdk-10/addon-admob-consent-reset-180480",
+  "description": "Reminder about the TCF requirement to reobtain consent every 13 months: ",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/main.js",
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "instance.js",
+    "plugin.js",
+    "type.js"
+  ]
+}

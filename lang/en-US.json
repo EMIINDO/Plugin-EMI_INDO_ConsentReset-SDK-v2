@@ -1,0 +1,107 @@
+{
+  "languageTag": "en-US",
+  "fileDescription": "Strings for ConsentReset Plugin",
+  "text": {
+    "plugins": {
+      "emi_indo_consentreset": {
+        "name": "ConsentReset",
+        "description": "Reminder about the TCF requirement to reobtain consent every 13 months:",
+        "help-url": "https://www.construct.net/en/forum/construct-3/plugin-sdk-10/addon-admob-consent-reset-180480",
+        "properties": {},
+        "aceCategories": {
+          "consent": "consent",
+          "error": "error",
+          "debug": "debug"
+        },
+        "conditions": {
+          "on-consent-ststus-obtained": {
+            "list-name": "On Consent Ststus Obtained",
+            "display-text": "On Consent Ststus Obtained",
+            "description": "User consent obtained. Personalized vs non-personalized undefined."
+          },
+          "on-consent-data": {
+            "list-name": "On Consent Data",
+            "display-text": "On Consent Data",
+            "description": "key, value, days"
+          },
+          "on-consent-data-expired": {
+            "list-name": "On Consent Data Expired",
+            "display-text": "On Consent Data Expired",
+            "description": "regain user consent"
+          },
+          "on-consent-reset": {
+            "list-name": "On Consent Reset",
+            "display-text": "On Consent Reset",
+            "description": "On Consent Reset success"
+          },
+          "on-error": {
+            "list-name": "On Error",
+            "display-text": "On Error",
+            "description": "On Error"
+          },
+          "on-remaining-time": {
+            "list-name": "On Remaining Time",
+            "display-text": "On Remaining Time",
+            "description": "DEBUG"
+          }
+        },
+        "actions": {
+          "get-consent-status": {
+            "list-name": "Get Consent Status",
+            "display-text": "Get Consent Status",
+            "description": "Get Consent Status"
+          },
+          "consent-reset": {
+            "list-name": "Consent Reset",
+            "display-text": "Set Consent Reset, (key [b]{0}[/b], name [b]{1}[/b], days [b]{2}[/b], remainingTime [b]{3}[/b])",
+            "description": "If the consent decision is more than 13 months old, the TC string will no longer be considered valid by Google and Google will not serve ads to that user. We suggest that you work with your CMP to remind users about their consent choices before the 13-month limit is reached.",
+            "params": {
+              "key": {
+                "name": "Key :",
+                "desc": "Key string value: localStorage.setItem(key)"
+              },
+              "value": {
+                "name": "Name :",
+                "desc": "Name string value"
+              },
+              "days": {
+                "name": "Days :",
+                "desc": "Reminder about the TCF requirement to reobtain consent every 13 months: consent.reset() will be executed automatically according to the specified Days."
+              },
+              "enabledRnTime": {
+                "name": "remainingTime:",
+                "desc": "Debug",
+                "items": {
+                  "true": "Enabled",
+                  "false": "Disabled"
+                }
+              }
+            }
+          }
+        },
+        "expressions": {
+          "consent-status": {
+            "translated-name": "Consent Status",
+            "description": "NOT_REQUIRED = 1,  OBTAINED = 3, REQUIRED = 2, UNKNOWN = 0"
+          },
+          "expires-time": {
+            "translated-name": "Expires Time",
+            "description": "DEBUG Check if the item has expired"
+          },
+          "item-name": {
+            "translated-name": "Item Name",
+            "description": "Consent reset item name"
+          },
+          "error-code": {
+            "translated-name": "Error Code",
+            "description": "response number"
+          },
+          "event-response": {
+            "translated-name": "Event Response",
+            "description": "Debug"
+          }
+        }
+      }
+    }
+  }
+}
